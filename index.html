@@ -6,7 +6,14 @@
     <title>BookMeNow - Conectamdo aos melhores proficionais</title>
     <meta name="description" content="Conectando aos melhores profissionais do mercado.">
     <meta name="keywords" content="Profissionais, prestadores de seviços, autônomos">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/main.css">
+
+
+
+
 </head>
 
 <body>
@@ -22,7 +29,7 @@
             </ul>
         </nav>
 
-        <div id="botao-topo">
+        <div id="botaoTopo">
             <a href="logi.html">Login</a>
             <a href="registrar.html">Registrar</a>
         </div>
@@ -32,9 +39,28 @@
         <div class="container">
             <h2>Conectando você aos Melhores Profissionais</h2>
             <p>Decubra a Qualidade e Confiabilidade em nossos parceiros</p>
-        </div>
-    </div>
-    <script src="/js/main.jss"></script>
+            <div id="formPesquisa">
+                <form action="#" method="get">
+                    <div>
+                        <div class="form-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" name="search" placeholder="O que você está procurando?">
+                        </div>
+
+                        <div class="form-icon">
+                            <i class="fa-solid fa-location-arrow"></i>
+                            <input type="text" name="location" placeholder="Sua Localização">
+                        </div>
+                </form>
+            </div>
+            <div class="lista-servicos-banner">
+                <ul>
+                    <li>Manutenção de Computadores</li>
+                    <li>Barbeiro</li>
+                    <li>Mecânico</li>
+                </ul>
+            </div>
+            <script src="/js/main.jss"></script>
 </body>
 
 </html>
