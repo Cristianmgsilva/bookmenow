@@ -1,7 +1,109 @@
 :root{
     --primaria:#3e4095;
-    --secundaria:#00afee;
+    --secundario:#00afee;
     --laranja:#f58634;
-    --texto:#4b4b4b;
+    --texto:#2f2f2f;
     --label-categoria:#d8c505;
 }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+#cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+#menu ul{
+    display: flex;
+    list-style: none;
+}
+
+#menu ul li{
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+#menu a{
+    color: var(--texto);
+    font-weight: 500;
+}
+
+.btn-secundario{
+    background-color: var(--secundario);
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+#banner{
+    background-image: url("../img/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+#banner p{
+    margin: 10px;
+}
+
+#formPesquisa{
+    background-color: #ffffff;
+    color: var(--texto);
+    font-size: 1.5em;
+    padding: 5px 15px;
+    border-radius: 24px;
+}
+
+#formPesquisa form{
+    display: flex;
+    align-items: center;
+}
+
+#formPesquisa input{
+        height: 40px;
+        font-size: 1rem;
+        border: none;
+}
+#formPesquisa i{
+        padding: 10px;
+        font-size: 1.2rem;
+}
+
+#formPesquisa button{
+    padding: 5px 15px;
+    background-color: #3e4095;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: none;
+    height:35px;  
+    width: 100px;                
+}
+
+.lista-servicos-banner li{ 
+        
+}
+
+
