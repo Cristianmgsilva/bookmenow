@@ -1,58 +1,64 @@
-:root{
-    --primaria:#3e4095;
-    --secundario:#00afee;
-    --laranja:#f58634;
-    --texto:#2f2f2f;
-    --label-categoria:#d8c505;
+:root {
+    --primaria: #3e4095;
+    --secundario: #00afee;
+    --laranja: #f58634;
+    --texto: #2f2f2f;
+    --label-categoria: #d8c505;
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-body{
+body {
     font-family: "Poppins", sans-serif;
 }
 
-#cabecalho{
+#cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    height: 65px;
 }
 
-.container{
+.container {
     max-width: 1140px;
     margin: 0 auto;
 }
 
-#menu ul{
+#menu ul {
     display: flex;
     list-style: none;
 }
 
-#menu ul li{
+#menu ul li {
     margin-left: 18px;
     margin-right: 18px;
 }
 
-#menu a{
+#menu a {
     color: var(--texto);
     font-weight: 500;
 }
 
-.btn-secundario{
+#botao-menu-mobile {
+    display: none;
+}
+
+
+.btn-secundario {
     background-color: var(--secundario);
     padding: 5px 15px 5px 15px;
     border-radius: 5px;
     color: #ffffff;
 }
 
-#banner{
+#banner {
     background-image: url("../img/banner.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,11 +70,11 @@ body{
     color: #ffffff;
 }
 
-#banner p{
+#banner p {
     margin: 10px;
 }
 
-#formPesquisa{
+#formPesquisa {
     background-color: #ffffff;
     color: var(--texto);
     font-size: 1.5em;
@@ -76,34 +82,144 @@ body{
     border-radius: 24px;
 }
 
-#formPesquisa form{
+#formPesquisa form {
     display: flex;
     align-items: center;
 }
 
-#formPesquisa input{
-        height: 40px;
-        font-size: 1rem;
-        border: none;
-}
-#formPesquisa i{
-        padding: 10px;
-        font-size: 1.2rem;
+#formPesquisa input {
+    height: 40px;
+    font-size: 1rem;
+    border: none;
 }
 
-#formPesquisa button{
+#formPesquisa i {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+#formPesquisa button {
     padding: 5px 15px;
     background-color: #3e4095;
     color: #ffffff;
     padding: 5px 15px;
     border-radius: 30px;
     border: none;
-    height:35px;  
-    width: 100px;                
+    height: 35px;
+    width: 100px;
 }
 
-.lista-servicos-banner li{ 
-        
+.lista-servicos-banner ul li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 0.8em;
+    border: 1px dotted #fff;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+.secao-titulos {
+    border-left: 5px solid var(--primaria);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 20px;
 }
 
 
+.titulo {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.titulo a {
+    color: var(--texto);
+    text-transform: uppercase;
+}
+
+
+/*Lista de Categorias*/
+
+
+.lista-card-categorias {
+    display: flex;
+    gap: 40px;
+}
+
+.lista-card-categorias img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+.lista-card-categorias div {
+    position: relative;
+}
+
+
+.lista-card-categorias span {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: var(--laranja);
+    color: #fff;
+    padding: 0px 20px;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+.lista-card-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.lista-card-servicos img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.card-servicos {
+    width: calc(33.33% - 30px)
+}
+
+
+/*      Estilo Mobile    */
+
+@media (max-width: 767px) {
+
+
+    #botao-menu-mobile {
+        display: block;
+        /* Mostrar elemento na Tela */
+        padding: 20px;
+        cursor: pointer;
+        font-size: 20px;
+
+    }
+
+
+#menu {
+    position: absolute; 
+    background-color: #fff;
+    width: 250px;
+    height: 100vh;
+    top: 65px;
+    z-index: 99999;
+    box-shadow: 2px 5px 5px #2f2f2f;
+}
+
+
+#menu ul {
+    margin-top: 30px;
+    display: block;
+}
+
+#menu li {
+    padding: 10px;
+}
+}
