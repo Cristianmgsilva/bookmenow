@@ -1,9 +1,9 @@
 :root {
     --primaria: #3e4095;
-    --secundario: #00afee;
+    --secundario: #00Afee;
     --laranja: #f58634;
     --texto: #2f2f2f;
-    --label-categoria: #d8c505;
+    --label-categoria: #d9c505;
 }
 
 * {
@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 #cabecalho {
@@ -37,8 +37,8 @@ body {
 }
 
 #menu ul li {
-    margin-left: 18px;
-    margin-right: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #menu a {
@@ -48,6 +48,7 @@ body {
 
 #botao-menu-mobile {
     display: none;
+    /* Desaparecer elementos da tela */
 }
 
 
@@ -67,7 +68,6 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
-    color: #ffffff;
 }
 
 #banner p {
@@ -78,35 +78,35 @@ body {
     background-color: #ffffff;
     color: var(--texto);
     font-size: 1.5em;
-    padding: 5px 15px;
-    border-radius: 24px;
+    border-radius: 30px;
 }
 
 #formPesquisa form {
     display: flex;
     align-items: center;
+    padding: 5px;
 }
 
-#formPesquisa input {
+#formPesquisa form input {
     height: 40px;
     font-size: 1rem;
     border: none;
 }
 
-#formPesquisa i {
+#formPesquisa form i {
     padding: 10px;
     font-size: 1.2rem;
 }
 
 #formPesquisa button {
-    padding: 5px 15px;
-    background-color: #3e4095;
-    color: #ffffff;
-    padding: 5px 15px;
-    border-radius: 30px;
+    background-color: var(--primaria);
+    font-size: 1.2rem;
+    height: 40px;
     border: none;
-    height: 35px;
-    width: 100px;
+    width: 150px;
+    border-radius: 20px;
+    color: #ffffff;
+
 }
 
 .lista-servicos-banner ul li {
@@ -118,29 +118,26 @@ body {
     border-radius: 50px;
 }
 
-.secao-titulos {
+.secao-titulo {
     border-left: 5px solid var(--primaria);
     margin-top: 30px;
     margin-bottom: 30px;
     padding-left: 20px;
 }
 
-
 .titulo {
     display: flex;
     justify-content: space-between;
 }
 
-
-
 .titulo a {
     color: var(--texto);
     text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-
-/*Lista de Categorias*/
-
+/* Lista de Categorias */
 
 .lista-card-categorias {
     display: flex;
@@ -153,11 +150,9 @@ body {
     border-radius: 15px;
 }
 
-
 .lista-card-categorias div {
     position: relative;
 }
-
 
 .lista-card-categorias span {
     display: block;
@@ -175,51 +170,211 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: space-between;
 }
 
 .lista-card-servicos img {
     width: 100%;
     height: auto;
     border-radius: 15px;
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
 }
 
 .card-servicos {
-    width: calc(33.33% - 30px)
+    flex-grow: 1;
+    width: calc(33.33 - 30px);
 }
 
-
-/*      Estilo Mobile    */
-
-@media (max-width: 767px) {
-
-
-    #botao-menu-mobile {
-        display: block;
-        /* Mostrar elemento na Tela */
-        padding: 20px;
-        cursor: pointer;
-        font-size: 20px;
-
-    }
-
-
-#menu {
-    position: absolute; 
-    background-color: #fff;
-    width: 250px;
-    height: 100vh;
-    top: 65px;
-    z-index: 99999;
-    box-shadow: 2px 5px 5px #2f2f2f;
+.card-foto {
+    position: relative;
 }
 
+.card-foto-legenda {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
 
-#menu ul {
-    margin-top: 30px;
+.card-foto-preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-foto-categoria {
+    background-color: var(--label-categoria);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.card-descricao-legenda {
+    display: flex;
+    justify-content: space-between;
+}
+
+#rodape {
+    margin-top: 50px;
+    border-top: 2px solid #ccc;
+    padding-top: 30px;
+}
+
+#linha-rodape {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.coluna-rodape {
+    width: 25%;
+}
+
+.coluna-rodape a {
+    color: var(--texto);
+    margin-top: 5px;
     display: block;
 }
 
-#menu li {
-    padding: 10px;
+.coluna-rodape a:hover {
+    color: var(--primaria);
+    font-weight: 500;
 }
+
+.coluna-rodape ul {
+    list-style: none;
 }
+
+.coluna-rodape i {
+    color: var(--primaria);
+}
+
+.rede-social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rede-social a {
+    background-color: #ededed;
+    font-size: 24px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.copyright {
+    background-color: #ccc;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+/* Estilo Mobile */
+
+@media (max-width: 767px) {
+
+    #cabecalho{
+        position:fixed;
+        background-color: #fff;
+        width: 100%;
+        z-index: 99999;
+    }
+
+    #logotipo img {
+        height: 30px;
+    }
+
+    #banner{
+        padding-top: 100px;
+        height: 350px ;
+    }
+
+    #botao-menu-mobile {
+        display: block;
+        /* Mostrar elemento na tela*/
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    #menu {
+        position: fixed;
+        background-color: #fff;
+        width: 250px;
+        height: 100vh;
+        top: 65px;
+        z-index: 999999;
+        box-shadow: 2px 5px 5px #2f2f2f;
+        left: -255px;
+        transition: left 0.6s;
+    }
+
+    #menu.menu-ativo {
+        left: 0;
+    }
+
+    #menu ul {
+        margin-top: 30px;
+        display: block;
+    }
+
+    #menu li {
+        padding: 10px;
+    }
+
+    #formPesquisa {
+        margin-left: 15px;
+        margin-right: 15px;
+        border-radius: 10px;
+
+    }
+
+    #formPesquisa form {
+        flex-direction: column;
+    }
+    
+    #formpesquisa input{
+        flex-grow: 1;
+    }
+
+    .form-icon{
+        display: flex;
+        width: 100%;
+    }
+
+    .lista-servicos-banner{
+        display: none;
+    }
+
+    #banner h2 {
+        font-size: 20px;
+    }
+
+    #banner  p {
+        font-size: 14px;
+    }
+
+    .card-servicos {
+            flex-grow: 1;
+            width: calc((100% / 2) - 30px);
+    }
+
+    .coluna-rodape {
+        width: 50%;
+    }
